@@ -1,0 +1,35 @@
+class AccessControl:
+    def __init__(self):
+        # Definindo um dicionário de permissões por papel de usuário
+        self.permissions = {
+            'regular_user': {'read': True, 'write': False},
+            'admin': {'read': True, 'write': True}
+        }
+
+    def check_permission(self, user_role, resource, action):
+        # Verificar se o papel do usuário tem permissão para a ação no recurso
+        if user_role in self.permissions:
+            role_permissions = self.permissions[user_role]
+            if action in role_permissions:
+                return role_permissions[action]
+        return False
+
+if __name__ == "__main__":
+    access_control = AccessControl()
+
+    # Verificar permissões para diferentes usuários e ações
+    user_role = 'regular_user'
+    resource = 'posts'
+    action = 'read'
+    if access_control.check_permission(user_role, resource, action):
+        print(f'O usuário do tipo "{user_role}" tem permissão para ler {resource}.')
+    else:
+        print(f'O usuário do tipo "{user_role}" não tem permissão para ler {resource}.')
+
+    user_role = 'admin'
+    action = 'write'
+    if access_control.check_permission(user_role, resource, action):
+        print(f'O usuário do tipo "{user_role}" tem permissão para escrever em {resource}.')
+    else:
+        print(f'O usuário do tipo "{user_role}" não tem permissão para escrever em {resource}.')
+<!--  -->

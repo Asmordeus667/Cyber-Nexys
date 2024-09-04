@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro - Cyber-Nexis</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link para o arquivo CSS -->
+</head>
+
+<body>
+  <header>
+    <h1>Cyber-Nexis</h1>
+    <p>Protegendo a Liberdade Digital</p>
+  </header>
+
+  <div class="container">
+    <div class="register-container">
+      <h2>Cadastro de Identidade Anônima</h2>
+      <p>Para garantir sua privacidade e segurança, é obrigatório o uso de um pseudônimo ou codinome. Por favor, escolha uma identidade anônima que você usará para se registrar.</p>
+      <form id="register-form">
+        <label for="alias">Pseudônimo ou Codinome:</label>
+        <input type="text" id="alias" name="alias" required aria-required="true"><br><br>
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required aria-required="true"><br><br>
+        <button type="submit">Cadastrar</button>
+      </form>
+      <p id="error-message" style="color: red; text-align: center; display: none;">Erro ao cadastrar a identidade. Tente novamente.</p>
+      <a href="registro.html">Já tem uma conta? Faça login</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('register-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Impede o envio padrão do formulário
+
+      var alias = document.getElementById('alias').value;
+      var password = document.getElementById('password').value;
+
+      // Lógica de validação
+      if (alias === '' || password === '') {
+        document.getElementById('error-message').textContent = 'Todos os campos são obrigatórios.';
+        document.getElementById('error-message').style.display = 'block';
+      } else {
+        // Lógica para enviar os dados do formulário ao servidor
+        // Exemplo de feedback após cadastro bem-sucedido (simulado)
+        alert('Cadastro bem-sucedido! Você será redirecionado para a página de login.');
+        window.location.href = 'login.html'; // Redirecionamento após cadastro
+      }
+    });
+  </script>
+</body>
+</html>

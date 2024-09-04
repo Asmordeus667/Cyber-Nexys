@@ -1,0 +1,119 @@
+/* styles.css */
+
+/* Define o fundo da página como preto */
+body {
+    background-color: black;
+    color: white; /* Define a cor do texto como branco para contraste com o fundo preto */
+    font-family: Arial, sans-serif; /* Define uma fonte padrão */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para o cabeçalho */
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilo para a imagem do logotipo */
+.logo {
+    max-width: 600px; /* Ajuste o tamanho do logotipo conforme necessário */
+    height: auto;
+}
+
+/* Estilo para os títulos principais e secundários */
+h1, h2, h3, h6 {
+    color: red; /* Títulos em vermelho */
+}
+
+/* Estilo para os links de navegação */
+.nav-links a {
+    color: red; /* Cor dos links em vermelho */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    padding: 10px 20px;
+    border: 2px solid red; /* Borda vermelha */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: black; /* Fundo preto */
+    display: inline-block;
+    margin: 5px;
+    font-family: 'Courier New', Courier, monospace; /* Fonte de estilo monoespaçado para um visual hacker */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Efeito de transição suave */
+}
+
+/* Efeito de hover para os links de navegação */
+.nav-links a:hover {
+    background-color: red; /* Fundo vermelho ao passar o mouse */
+    color: black; /* Cor do texto preta ao passar o mouse */
+    border-color: darkred; /* Borda vermelha escura ao passar o mouse */
+}
+
+/* Estilo para as seções */
+section {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid red; /* Borda vermelha */
+    border-radius: 5px;
+    background-color: black; /* Cor de fundo preto para as seções */
+}
+
+/* Estilo para os parágrafos dentro das seções */
+section p {
+    margin: 0;
+    padding: 10px 0;
+}
+
+/* Estilo para a galeria de imagens */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-image {
+    margin: 10px;
+    border: 2px solid red; /* Borda vermelha para as imagens */
+    border-radius: 5px;
+}
+
+/* Estilo específico para a seção de chat */
+#chat-section {
+    margin-top: 20px;
+}
+
+#messages {
+    border: 1px solid #ccc;
+    height: 400px;
+    overflow-y: scroll;
+    padding: 10px;
+    background-color: #1a1a1a; /* Fundo escuro para o container de mensagens */
+    color: white; /* Cor do texto branco */
+}
+
+#message-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+#message-input,
+#file-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #333; /* Fundo escuro para os inputs */
+    border: 1px solid red; /* Borda vermelha */
+    color: white; /* Cor do texto branco */
+}
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

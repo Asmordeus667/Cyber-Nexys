@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Notícias da Cyber-Nexis">
+  <meta name="keywords" content="notícias, Cyber-Nexis, atualizações, segurança cibernética">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Cyber-Nexis">
+  <title>Notícias da Cyber-Nexis</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img src="Imagem.jpg/Logotipo.jpg" width="600" height="500" alt="Logotipo" class="logo">
+      <h1>Cyber-Nexis</h1>
+      <p>Protegendo a Liberdade Digital</p>
+      <nav>
+        <a href="index.html">Página Inicial</a>
+        <select onchange="changeLanguage(this.value)">
+          <option value="pt-BR">Português</option>
+          <option value="en-US">English</option>
+          <option value="es-ES">Español</option>
+        </select>
+      </nav>
+    </div>
+  </header>
+
+  <section class="container section">
+    <h2>Últimas Notícias</h2>
+
+    <!-- Notícia 1 -->
+    <div class="news-item">
+      <h3 class="news-title">Surgimento da Cyber-Nexis: Nova Organização Secreta de Hackers Emergindo nas Sombras da Web</h3>
+      <img src="Imagem/Logotipo.jpg" alt="Logotipo da notícia sobre a Cyber-Nexis emergindo na web">
+      <div class="news-content">
+        <p>Em um cenário digital cada vez mais complexo e interconectado, surge uma nova entidade que está deixando autoridades cibernéticas em alerta máximo. Conhecida como Cyber-Nexis...</p>
+        <a href="noticia1.html" class="button">Leia mais</a>
+      </div>
+    </div>
+
+    <!-- Notícia 2 -->
+    <div class="news-item">
+      <h3 class="news-title">Cyber-Nexis Procura Novos Talentos: Recrutamento Secreto de Hackers Eleva Preocupações de Segurança Cibernética</h3>
+      <img src="Imagem/OIG2 (3).jpeg" alt="Imagem relacionada ao recrutamento secreto da Cyber-Nexis">
+      <div class="news-content">
+        <p>A Cyber-Nexis, a misteriosa organização de hackers que tem instigado preocupações em todo o mundo da segurança cibernética, está agora intensificando seus esforços de recrutamento...</p>
+        <a href="noticia2.html" class="button">Leia mais</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2024 Cyber-Nexis. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    function changeLanguage(language) {
+      var sections = document.querySelectorAll('[data-translate]');
+
+      sections.forEach(function(section) {
+        var translations = section.getAttribute('data-translate').split('|');
+        var index;
+        switch (language) {
+          case 'pt-BR':
+            index = 0; // Português
+            break;
+          case 'en-US':
+            index = 1; // Inglês
+            break;
+          case 'es-ES':
+            index = 2; // Espanhol
+            break;
+          default:
+            console.error('Idioma não suportado:', language);
+            return; // Sai da função se o idioma não for suportado
+        }
+
+        // Verifica se o número de traduções corresponde ao número esperado
+        if (index >= translations.length) {
+          console.error('Número de traduções insuficiente para o idioma selecionado:', language);
+          return; // Sai da função se o número de traduções for insuficiente
+        }
+
+        section.textContent = translations[index];
+      });
+    }
+  </script>
+</body>
+</html>

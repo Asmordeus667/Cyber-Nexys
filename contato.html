@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entre em contato com a Cyber-Nexis">
+  <meta name="keywords" content="contato, Cyber-Nexis, suporte, ajuda, feedback">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Cyber-Nexis">
+  <title>Contato - Cyber-Nexis</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img src="Imagem.jpg/Logotipo.jpg" width="600" height="500" alt="Logotipo" class="logo">
+      <h1>Cyber-Nexis</h1>
+      <p>Protegendo a Liberdade Digital</p>
+      <nav>
+        <a href="index.html">Página Inicial</a>
+        <select onchange="changeLanguage(this.value)">
+          <option value="pt-BR">Português</option>
+          <option value="en-US">English</option>
+          <option value="es-ES">Español</option>
+        </select>
+      </nav>
+    </div>
+  </header>
+  
+  <section class="container section">
+    <h2>Entre em contato</h2>
+    <p>Entre em contato conosco preenchendo o formulário abaixo.</p>
+    
+    <form id="contact-form" action="enviar-contato.php" method="POST" onsubmit="return validateForm()">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" placeholder="Seu Nome" required class="form-input">
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Seu Email" required class="form-input">
+      
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" placeholder="Sua Mensagem" rows="5" required class="form-textarea"></textarea>
+      
+      <input type="submit" value="Enviar Mensagem" class="button">
+    </form>
+  </section>  
+  
+  <footer>
+  </footer>
+
+  <script src="frontend.js"></script>
+</body>
+</html>

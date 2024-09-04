@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Oportunidades de Carreira na Cyber-Nexis">
+  <meta name="keywords" content="carreira, oportunidades, recrutamento, Cyber-Nexis, segurança cibernética">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Cyber-Nexis">
+  <title>Oportunidades de Carreira - Cyber-Nexis</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Vincule o arquivo CSS externo -->
+</head>
+<body>
+  <header>
+    <div class="container">
+  <img src="Imagem.jpg/Logotipo.jpg" width="600" height="500" alt="Logotipo" class="Logotipo.jpg ">   
+      <h1>de Carreira na Cyber-Nexis</h1>
+    </div>
+  </header>
+  
+  <section class="container section">
+    <h2>Junte-se à Nossa Equipe</h2>
+    <p>Estamos sempre em busca de talentos para se juntar à nossa equipe. Se você é apaixonado por tecnologia e quer fazer parte de uma organização inovadora, envie seu currículo hoje mesmo!</p>
+    <div class="image-gallery">
+      <img src="Imagem.jpg/Grupo da CyberNexis.jpeg"width="100000" height="700" alt="Grupo da CyberNexis.jpeg" class="gallery-image">
+      <img src="Imagem.jpg/download.jpg" width="100000" height="700" alt="Pessoa programando em um ambiente escuro" class="gallery-image">
+      <img src="Imagem.jpg/OIG2 (3).jpeg" width="100000" height="1000" alt="Jovem aprendiz recebendo orientação" class="gallery-image">
+    </div>
+    <p>Envie seu currículo para <a href="mailto:recrutamento@cyber-nexis.com" class="button">recrutamento@cyber-nexis.com</a> ou entre em contato para mais informações.</p>
+  </section>
+
+  <!-- Seção de Perguntas -->
+  <section class="container section">
+    <h2>Perguntas do Processo de Recrutamento</h2>
+    <form id="recruitment-form" onsubmit="return validateForm()">
+      <div class="question">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required aria-required="true">
+      </div>
+      <div class="question">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required aria-required="true">
+      </div>
+      
+      <!-- Pergunta 01 -->
+      <div class="question">
+        <label for="answer1">Por que você está interessado em se juntar à nossa organização?</label>
+        <textarea id="answer1" name="answer1" rows="4" required aria-required="true"></textarea>
+      </div>
+      
+      <!-- Pergunta 02 -->
+      <div class="question">
+        <label for="answer2">Qual é a sua experiência anterior em áreas relacionadas à tecnologia e segurança cibernética?</label>
+        <textarea id="answer2" name="answer2" rows="4" required aria-required="true"></textarea>
+      </div>
+      
+      <!-- Pergunta 03 -->
+      <div class="question">
+        <label for="answer3">Descreva uma situação desafiadora que você enfrentou em um projeto anterior e como você a superou.</label>
+        <textarea id="answer3" name="answer3" rows="4" required aria-required="true"></textarea>
+      </div>
+      
+      <!-- Pergunta 04 -->
+      <div class="question">
+        <label for="answer4">Quais habilidades ou qualidades você traria para a nossa equipe?</label>
+        <textarea id="answer4" name="answer4" rows="4" required aria-required="true"></textarea>
+      </div>
+      
+      <!-- Pergunta 05 -->
+      <div class="question">
+        <label for="answer5">Como você se mantém atualizado sobre as últimas tendências e desenvolvimentos em segurança cibernética?</label>
+        <textarea id="answer5" name="answer5" rows="4" required aria-required="true"></textarea>
+      </div>
+      
+      <!-- Pergunta 06 -->
+      <div class="question">
+        <label for="answer6">Como você trabalha em equipe e se comunica com os outros membros da equipe?</label>
+        <textarea id="answer6" name="answer6" rows="4" required aria-required="true"></textarea>
+      </div>
+      
+      <!-- Pergunta 07 -->
+      <div class="question">
+        <label for="answer7">Qual é a sua abordagem para lidar com situações de pressão ou prazos apertados?</label>
+        <textarea id="answer7" name="answer7" rows="4" required aria-required="true"></textarea>
+      </div>
+      
+      <!-- Pergunta 08 -->
+      <div class="question">
+        <label for="answer8">Você pode nos contar sobre um projeto ou realização de destaque que você teve em sua carreira?</label>
+        <textarea id="answer8" name="answer8" rows="4" required aria-required="true"></textarea>
+      </div>
+      
+      <!-- Pergunta 09 -->
+      <div class="question">
+        <label for="answer9">Por que você acha que seria um bom ajuste para a nossa cultura organizacional?</label>
+        <textarea id="answer9" name="answer9" rows="4" required aria-required="true"></textarea>
+      </div>
+      
+      <!-- Pergunta 10 -->
+      <div class="question">
+        <label for="answer10">Adicione aqui sua décima pergunta</label>
+        <textarea id="answer10" name="answer10" rows="4" required aria-required="true"></textarea>
+      </div>
+      
+      <button type="submit" class="button">Enviar Respostas</button>
+    </form>
+    <div id="feedback" class="feedback" role="alert" aria-live="assertive"></div>
+  </section>
+  <!-- Fim da Seção de Perguntas -->
+
+  <script>
+    function validateForm() {
+      // Validação básica do e-mail
+      var email = document.getElementById('email').value;
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert('Por favor, insira um endereço de e-mail válido.');
+        return false;
+      }
+      
+      // Aqui você pode adicionar mais validações conforme necessário
+      
+      return true; // Permite o envio do formulário se todas as validações passarem
+    }
+
+    // Função para exibir feedback após envio do formulário
+    function showFeedback(message, type) {
+      var feedback = document.getElementById('feedback');
+      feedback.textContent = message;
+      feedback.className = 'feedback ' + type;
+    }
+
+    // Evento de envio do formulário
+    document.getElementById('recruitment-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Impede o envio padrão do formulário
+      
+      // Aqui você pode adicionar lógica para enviar os dados do formulário para o servidor
+      
+      // Exemplo de feedback após envio bem-sucedido
+      showFeedback('Respostas enviadas com sucesso!', 'success');
+    });
+  </script>
+</body>
+</html>

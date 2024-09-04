@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Cyber-Nexis</title>
+  <style>
+    /* Estilos opcionais para layout */
+    body {
+      font-family: 'Courier New', monospace;
+      margin: 0;
+      padding: 0;
+      background-color: #000000;
+      color: #ffffff;
+    }
+
+    header {
+      background-color: #333333;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .login-container {
+      width: 300px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+
+    .login-container h2 {
+      margin-bottom: 20px;
+      color: #ff3333; /* Título em vermelho */
+    }
+
+    .login-container label {
+      display: block;
+      margin-bottom: 10px;
+      color: #ff3333; /* Texto em vermelho */
+    }
+
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 3px;
+      background-color: rgba(255, 255, 255, 0.3);
+      color: #ffffff;
+    }
+
+    .login-container input[type="text"]:focus,
+    .login-container input[type="password"]:focus {
+      outline: none;
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .login-container button:hover {
+      background-color: #0056b3;
+    }
+
+    .login-container a {
+      display: block;
+      text-align: center;
+      margin-top: 15px;
+      color: #ff3333;
+      text-decoration: none;
+    }
+
+    .login-container a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Cyber-Nexis</h1>
+    <p>Protegendo a Liberdade Digital</p>
+  </header>
+
+  <div class="container">
+    <div class="login-container">
+      <h2>Login</h2>
+      <form id="login-form">
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username" required aria-required="true"><br><br>
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required aria-required="true"><br><br>
+        <button type="submit">Entrar</button>
+      </form>
+      <a href="register.html">Não tem uma conta? Cadastre-se</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat - Cyber-Nexis</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Vincula o arquivo CSS externo -->
+</head>
+<body>
+  <header>
+    <div class="container">
+     <img src="Imagem.jpg/Logotipo.jpg" width="600" height="500" alt="Logotipo" class="logo">
+      <h1>Cyber-Nexis</h1>
+      <p>Protegendo a Liberdade Digital</p>
+      <nav>
+        <a href="index.html">Página Inicial</a>
+        <select onchange="changeLanguage(this.value)">
+          <option value="pt-BR">Português</option>
+          <option value="en-US">English</option>
+          <option value="es-ES">Español</option>
+        </select>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <section id="chat-section">
+      <h2>Chat</h2>
+      <div id="messages"></div>
+      <form id="message-form" onsubmit="sendMessage(event)">
+        <input type="text" id="message-input" placeholder="Digite sua mensagem" required>
+        <input type="file" id="file-input" accept="image/*,audio/*">
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </div>
+
+  <script>
+    const messagesContainer = document.getElementById('messages');
+    const messageForm = document.getElementById('message-form');
+    const messageInput = document.getElementById('message-input');
+    const fileInput = document.getElementById('file-input');
+
+    function sendMessage(event) {
+      event.preventDefault();
+
+      const messageText = messageInput.value;
+      const file = fileInput.files[0];
+
+      if (messageText) {
+        const messageElement = document.createElement('p');
+        messageElement.textContent = messageText;
+        messagesContainer.appendChild(messageElement);
+        messageInput.value = '';
+      }
+
+      if (file) {
+        const fileElement = document.createElement('p');
+        fileElement.textContent = `Arquivo enviado: ${file.name}`;
+        messagesContainer.appendChild(fileElement);
+        fileInput.value = '';
+      }
+
+      // Role para a última mensagem
+      messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+  </script>
+</body>
+</html>

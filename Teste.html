@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste de Talento em Tecnologia - Cyber-Nexis</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img src="Imagem.jpg/Logotipo.jpg" width="600" height="500" alt="Logotipo" class="logo">
+      <h1>Cyber-Nexis</h1>
+      <p>Protegendo a Liberdade Digital</p>
+      <nav>
+        <a href="index.html">Página Inicial</a>
+        <select onchange="changeLanguage(this.value)">
+          <option value="pt-BR">Português</option>
+          <option value="en-US">English</option>
+          <option value="es-ES">Español</option>
+        </select>
+      </nav>
+    </div>
+  </header>
+  
+  <main>
+    <section class="container quiz-container">
+      <h2>Descubra seu Talento em Tecnologia!</h2>
+      <form id="quiz-form">
+        <!-- Pergunta 1 -->
+        <div class="question" id="question1">
+          <p>Pergunta 1: Qual é o principal protocolo de comunicação da internet?</p>
+          <input type="radio" id="q1a" name="q1" value="a">
+          <label for="q1a">HTTP</label><br>
+          <input type="radio" id="q1b" name="q1" value="b">
+          <label for="q1b">TCP/IP</label><br>
+          <input type="radio" id="q1c" name="q1" value="c">
+          <label for="q1c">FTP</label><br>
+          <input type="radio" id="q1d" name="q1" value="d">
+          <label for="q1d">SMTP</label>
+        </div>
+        <!-- Pergunta 2 -->
+        <div class="question" id="question2">
+          <p>Pergunta 2: Qual é a linguagem de programação mais utilizada para desenvolvimento web?</p>
+          <input type="radio" id="q2a" name="q2" value="a">
+          <label for="q2a">Python</label><br>
+          <input type="radio" id="q2b" name="q2" value="b">
+          <label for="q2b">JavaScript</label><br>
+          <input type="radio" id="q2c" name="q2" value="c">
+          <label for="q2c">Java</label><br>
+          <input type="radio" id="q2d" name="q2" value="d">
+          <label for="q2d">C++</label>
+        </div>
+        <!-- Pergunta 3 -->
+        <div class="question" id="question3">
+          <p>Pergunta 3: O que é um firewall?</p>
+          <input type="radio" id="q3a" name="q3" value="a">
+          <label for="q3a">Um dispositivo que protege contra incêndios</label><br>
+          <input type="radio" id="q3b" name="q3" value="b">
+          <label for="q3b">Um sistema de segurança que monitora e controla o tráfego de rede</label><br>
+          <input type="radio" id="q3c" name="q3" value="c">
+          <label for="q3c">Um software para edição de imagens</label><br>
+          <input type="radio" id="q3d" name="q3" value="d">
+          <label for="q3d">Um dispositivo para proteger contra hackers</label>
+        </div>
+        <!-- Pergunta 4 -->
+        <div class="question" id="question4">
+          <p>Pergunta 4: Qual é a função principal do DNS?</p>
+          <input type="radio" id="q4a" name="q4" value="a">
+          <label for="q4a">Converter nomes de domínio em endereços IP</label><br>
+          <input type="radio" id="q4b" name="q4" value="b">
+          <label for="q4b">Fornecer conexão à internet</label><br>
+          <input type="radio" id="q4c" name="q4" value="c">
+          <label for="q4c">Proteger contra ataques DDoS</label><br>
+          <input type="radio" id="q4d" name="q4" value="d">
+          <label for="q4d">Armazenar dados de sites</label>
+        </div>
+        <!-- Pergunta 5 -->
+        <div class="question" id="question5">
+          <p>Pergunta 5: O que é um endereço IP?</p>
+          <input type="radio" id="q5a" name="q5" value="a">
+          <label for="q5a">Um protocolo de rede</label><br>
+          <input type="radio" id="q5b" name="q5" value="b">
+          <label for="q5b">Um endereço único atribuído a cada dispositivo conectado à rede</label><br>
+          <input type="radio" id="q5c" name="q5" value="c">
+          <label for="q5c">Um tipo de firewall</label><br>
+          <input type="radio" id="q5d" name="q5" value="d">
+          <label for="q5d">Um software de segurança</label>
+        </div>
+        <!-- Pergunta 6 -->
+        <div class="question" id="question6">
+          <p>Pergunta 6: Qual é a principal função de um servidor web?</p>
+          <input type="radio" id="q6a" name="q6" value="a">
+          <label for="q6a">Armazenar arquivos</label><br>
+          <input type="radio" id="q6b" name="q6" value="b">
+          <label for="q6b">Enviar e receber e-mails</label><br>
+          <input type="radio" id="q6c" name="q6" value="c">
+          <label for="q6c">Servir conteúdo da web para os usuários</label><br>
+          <input type="radio" id="q6d" name="q6" value="d">
+          <label for="q6d">Monitorar tráfego de rede</label>
+        </div>
+        <!-- Pergunta 7 -->
+        <div class="question" id="question7">
+          <p>Pergunta 7: Qual a função do HTTPS em um site?</p>
+          <input type="radio" id="q7a" name="q7" value="a">
+          <label for="q7a">Aumentar a velocidade de carregamento do site</label><br>
+          <input type="radio" id="q7b" name="q7" value="b">
+          <label for="q7b">Criptografar a comunicação entre o navegador e o servidor</label><br>
+          <input type="radio" id="q7c" name="q7" value="c">
+          <label for="q7c">Armazenar dados dos usuários</label><br>
+          <input type="radio" id="q7d" name="q7" value="d">
+          <label for="q7d">Gerenciar cookies</label>
+        </div>
+        <!-- Pergunta 8 -->
+        <div class="question" id="question8">
+          <p>Pergunta 8: Qual é a linguagem usada para estruturar conteúdo na web?</p>
+          <input type="radio" id="q8a" name="q8" value="a">
+          <label for="q8a">CSS</label><br>
+          <input type="radio" id="q8b" name="q8" value="b">
+          <label for="q8b">JavaScript</label><br>
+          <input type="radio" id="q8c" name="q8" value="c">
+          <label for="q8c">HTML</label><br>
+          <input type="radio" id="q8d" name="q8" value="d">
+          <label for="q8d">Python</label>
+        </div>
+        <!-- Pergunta 9 -->
+        <div class="question" id="question9">
+          <p>Pergunta 9: O que é SQL?</p>
+          <input type="radio" id="q9a" name="q9" value="a">
+          <label for="q9a">Uma linguagem de programação para criar websites</label><br>
+          <input type="radio" id="q9b" name="q9" value="b">
+          <label for="q9b">Uma linguagem de consulta para bancos de dados</label><br>
+          <input type="radio" id="q9c" name="q9" value="c">
+          <label for="q9c">Um protocolo de rede</label><br>
+          <input type="radio" id="q9d" name="q9" value="d">
+          <label for="q9d">Um tipo de software antivírus</label>
+        </div>
+        <!-- Pergunta 10 -->
+        <div class="question" id="question10">
+          <p>Pergunta 10: Qual a função do CSS em um site?</p>
+          <input type="radio" id="q10a" name="q10" value="a">
+          <label for="q10a">Adicionar interatividade</label><br>
+          <input type="radio" id="q10b" name="q10" value="b">
+          <label for="q10b">Estruturar conteúdo</label><br>
+          <input type="radio" id="q10c" name="q10" value="c">
+          <label for="q10c">Estilizar e formatar a aparência</label><br>
+          <input type="radio" id="q10d" name="q10" value="d">
+          <label for="q10d">Gerenciar banco de dados</label>
+        </div>
+        <!-- Pergunta 11 -->
+        <div class="question" id="question11">
+          <p>Pergunta 11: Qual é a função do Git em desenvolvimento de software?</p>
+          <input type="radio" id="q11a" name="q11" value="a">
+          <label for="q11a">Proteger contra vírus</label><br>
+          <input type="radio" id="q11b" name="q11" value="b">
+          <label for="q11b">Gerenciamento de versões de código</label><br>
+          <input type="radio" id="q11c" name="q11" value="c">
+          <label for="q11c">Aumentar a velocidade do site</label><br>
+          <input type="radio" id="q11d" name="q11" value="d">
+          <label for="q11d">Armazenamento de dados</label>
+        </div>
+        <!-- Pergunta 12 -->
+        <div class="question" id="question12">
+          <p>Pergunta 12: O que é um banco de dados relacional?</p>
+          <input type="radio" id="q12a" name="q12" value="a">
+          <label for="q12a">Um banco de dados que armazena dados em tabelas com relações entre elas</label><br>
+          <input type="radio" id="q12b" name="q12" value="b">
+          <label for="q12b">Um banco de dados que armazena dados em documentos JSON</label><br>
+          <input type="radio" id="q12c" name="q12" value="c">
+          <label for="q12c">Um banco de dados que armazena dados em arquivos CSV</label><br>
+          <input type="radio" id="q12d" name="q12" value="d">
+          <label for="q12d">Um banco de dados que armazena dados em tabelas de hash</label>
+        </div>
+        <!-- Pergunta 13 -->
+        <div class="question" id="question13">
+          <p>Pergunta 13: Qual é a função do JavaScript em uma página web?</p>
+          <input type="radio" id="q13a" name="q13" value="a">
+          <label for="q13a">Adicionar estilos ao conteúdo</label><br>
+          <input type="radio" id="q13b" name="q13" value="b">
+          <label for="q13b">Adicionar interatividade e comportamento dinâmico</label><br>
+          <input type="radio" id="q13c" name="q13" value="c">
+          <label for="q13c">Estruturar o conteúdo</label><br>
+          <input type="radio" id="q13d" name="q13" value="d">
+          <label for="q13d">Gerenciar bancos de dados</label>
+        </div>
+        <!-- Pergunta 14 -->
+        <div class="question" id="question14">
+          <p>Pergunta 14: O que é uma API?</p>
+          <input type="radio" id="q14a" name="q14" value="a">
+          <label for="q14a">Um protocolo para conexão de dispositivos móveis</label><br>
+          <input type="radio" id="q14b" name="q14" value="b">
+          <label for="q14b">Um conjunto de ferramentas para desenvolver software</label><br>
+          <input type="radio" id="q14c" name="q14" value="c">
+          <label for="q14c">Um sistema operacional</label><br>
+          <input type="radio" id="q14d" name="q14" value="d">
+          <label for="q14d">Uma biblioteca para manipulação de imagens</label>
+        </div>
+        <!-- Pergunta 15 -->
+        <div class="question" id="question15">
+          <p>Pergunta 15: O que é o Linux?</p>
+          <input type="radio" id="q15a" name="q15" value="a">
+          <label for="q15a">Um sistema operacional</label><br>
+          <input type="radio" id="q15b" name="q15" value="b">
+          <label for="q15b">Um tipo de software de segurança</label><br>
+          <input type="radio" id="q15c" name="q15" value="c">
+          <label for="q15c">Um protocolo de internet</label><br>
+          <input type="radio" id="q15d" name="q15" value="d">
+          <label for="q15d">Um tipo de banco de dados</label>
+        </div>
+        <!-- Pergunta 16 -->
+        <div class="question" id="question16">
+          <p>Pergunta 16: O que é um servidor?</p>
+          <input type="radio" id="q16a" name="q16" value="a">
+          <label for="q16a">Um software para design gráfico</label><br>
+          <input type="radio" id="q16b" name="q16" value="b">
+          <label for="q16b">Um software que permite o gerenciamento de redes sociais</label><br>
+          <input type="radio" id="q16c" name="q16" value="c">
+          <label for="q16c">Um dispositivo ou programa que fornece serviços a outros programas ou dispositivos</label><br>
+          <input type="radio" id="q16d" name="q16" value="d">
+          <label for="q16d">Um software para edição de vídeo</label>
+        </div>
+        <!-- Pergunta 17 -->
+        <div class="question" id="question17">
+          <p>Pergunta 17: O que é um bug em software?</p>
+          <input type="radio" id="q17a" name="q17" value="a">
+          <label for="q17a">Um novo recurso adicionado ao software</label><br>
+          <input type="radio" id="q17b" name="q17" value="b">
+          <label for="q17b">Um erro ou falha no software</label><br>
+          <input type="radio" id="q17c" name="q17" value="c">
+          <label for="q17c">Uma atualização de segurança</label><br>
+          <input type="radio" id="q17d" name="q17" value="d">
+          <label for="q17d">Uma ferramenta de desenvolvimento</label>
+        </div>
+        <!-- Pergunta 18 -->
+        <div class="question" id="question18">
+          <p>Pergunta 18: Qual é a função do DevOps?</p>
+          <input type="radio" id="q18a" name="q18" value="a">
+          <label for="q18a">Gerenciar operações financeiras</label><br>
+          <input type="radio" id="q18b" name="q18" value="b">
+          <label for="q18b">Automatizar e melhorar a colaboração entre desenvolvimento e operações</label><br>
+          <input type="radio" id="q18c" name="q18" value="c">
+          <label for="q18c">Gerenciar dados de clientes</label><br>
+          <input type="radio" id="q18d" name="q18" value="d">
+          <label for="q18d">Criar design gráfico</label>
+        </div>
+        <!-- Pergunta 19 -->
+        <div class="question" id="question19">
+          <p>Pergunta 19: O que é uma máquina virtual?</p>
+          <input type="radio" id="q19a" name="q19" value="a">
+          <label for="q19a">Um tipo de hardware</label><br>
+          <input type="radio" id="q19b" name="q19" value="b">
+          <label for="q19b">Um software que emula um computador físico</label><br>
+          <input type="radio" id="q19c" name="q19" value="c">
+          <label for="q19c">Um tipo de firewall</label><br>
+          <input type="radio" id="q19d" name="q19" value="d">
+          <label for="q19d">Um tipo de banco de dados</label>
+        </div>
+        <!-- Pergunta 20 -->
+        <div class="question" id="question20">
+          <p>Pergunta 20: O que é um algoritmo?</p>
+          <input type="radio" id="q20a" name="q20" value="a">
+          <label for="q20a">Um conjunto de instruções passo a passo para resolver um problema</label><br>
+          <input type="radio" id="q20b" name="q20" value="b">
+          <label for="q20b">Um tipo de linguagem de programação</label><br>
+          <input type="radio" id="q20c" name="q20" value="c">
+          <label for="q20c">Um software para gerenciamento de banco de dados</label><br>
+          <input type="radio" id="q20d" name="q20" value="d">
+          <label for="q20d">Um protocolo de rede</label>
+        </div>
+
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </section>
+  </main>
+  
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Cyber-Nexis. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
